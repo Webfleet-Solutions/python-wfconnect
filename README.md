@@ -1,6 +1,6 @@
 # WEBFLEET.connect 
 
-This library enables you to interact with WEBFLEETs devloper API called [WEBFLEET.connect](https://portals.webfleet.com/s/article/WEBFLEET-connect-API-documentation)
+This library enables you to interact with WEBFLEETs developer API called [WEBFLEET.connect](https://portals.webfleet.com/s/article/WEBFLEET-connect-API-documentation)
 
 ## Quick Start
 
