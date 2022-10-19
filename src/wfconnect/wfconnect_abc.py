@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 """
 An abstract WEBFLEET.connect API class.
@@ -87,6 +88,9 @@ class WfConnectGeneratedAbc(metaclass=ABCMeta):
     def deleteArea(self, **kwargs):
         return self._request("deleteArea", **kwargs)
 
+    def getActiveAssetCouplings(self, **kwargs):
+        return self._request("getActiveAssetCouplings", **kwargs)
+
     def removeRemoteAuxDeviceConfig(self, **kwargs):
         return self._request("removeRemoteAuxDeviceConfig", **kwargs)
 
@@ -156,11 +160,11 @@ class WfConnectGeneratedAbc(metaclass=ABCMeta):
     def attachDriverToVehicle(self, **kwargs):
         return self._request("attachDriverToVehicle", **kwargs)
 
-    def deleteDriverExtern(self, **kwargs):
-        return self._request("deleteDriverExtern", **kwargs)
-
     def detachDriverFromGroup(self, **kwargs):
         return self._request("detachDriverFromGroup", **kwargs)
+
+    def deleteDriverExtern(self, **kwargs):
+        return self._request("deleteDriverExtern", **kwargs)
 
     def showDriverGroupDrivers(self, **kwargs):
         return self._request("showDriverGroupDrivers", **kwargs)
@@ -182,6 +186,12 @@ class WfConnectGeneratedAbc(metaclass=ABCMeta):
 
     def deleteDriverGroup(self, **kwargs):
         return self._request("deleteDriverGroup", **kwargs)
+
+    def updateDriverRdtRulesExtern(self, **kwargs):
+        return self._request("updateDriverRdtRulesExtern", **kwargs)
+
+    def getDriverRdtRulesExtern(self, **kwargs):
+        return self._request("getDriverRdtRulesExtern", **kwargs)
 
     def insertDriverExtern(self, **kwargs):
         return self._request("insertDriverExtern", **kwargs)
@@ -261,6 +271,9 @@ class WfConnectGeneratedAbc(metaclass=ABCMeta):
     def showObjectGroupObjects(self, **kwargs):
         return self._request("showObjectGroupObjects", **kwargs)
 
+    def unauthorizeDriverGroupForVehicle(self, **kwargs):
+        return self._request("unauthorizeDriverGroupForVehicle", **kwargs)
+
     def showDriverReportExtern(self, **kwargs):
         return self._request("showDriverReportExtern", **kwargs)
 
@@ -278,6 +291,9 @@ class WfConnectGeneratedAbc(metaclass=ABCMeta):
 
     def attachObjectToGroup(self, **kwargs):
         return self._request("attachObjectToGroup", **kwargs)
+
+    def authorizeDriverGroupForVehicle(self, **kwargs):
+        return self._request("authorizeDriverGroupForVehicle", **kwargs)
 
     def showVehicleReportExtern(self, **kwargs):
         return self._request("showVehicleReportExtern", **kwargs)
@@ -297,8 +313,17 @@ class WfConnectGeneratedAbc(metaclass=ABCMeta):
     def updateContractInfo(self, **kwargs):
         return self._request("updateContractInfo", **kwargs)
 
+    def getObjectCanMalfunctions(self, **kwargs):
+        return self._request("getObjectCanMalfunctions", **kwargs)
+
+    def getObjectCanSignals(self, **kwargs):
+        return self._request("getObjectCanSignals", **kwargs)
+
     def updateVehicle(self, **kwargs):
         return self._request("updateVehicle", **kwargs)
+
+    def getElectricVehicleData(self, **kwargs):
+        return self._request("getElectricVehicleData", **kwargs)
 
     def insertObjectGroup(self, **kwargs):
         return self._request("insertObjectGroup", **kwargs)
@@ -366,14 +391,41 @@ class WfConnectGeneratedAbc(metaclass=ABCMeta):
     def getArchivedReport(self, **kwargs):
         return self._request("getArchivedReport", **kwargs)
 
+    def showIOReportExtern(self, **kwargs):
+        return self._request("showIOReportExtern", **kwargs)
+
+    def getDriverKPIsExtern(self, **kwargs):
+        return self._request("getDriverKPIsExtern", **kwargs)
+
+    def showAccelerationEvents(self, **kwargs):
+        return self._request("showAccelerationEvents", **kwargs)
+
+    def showOptiDriveIndicator(self, **kwargs):
+        return self._request("showOptiDriveIndicator", **kwargs)
+
+    def showLogbook(self, **kwargs):
+        return self._request("showLogbook", **kwargs)
+
+    def getObjectKPIs(self, **kwargs):
+        return self._request("getObjectKPIs", **kwargs)
+
+    def showSpeedingEvents(self, **kwargs):
+        return self._request("showSpeedingEvents", **kwargs)
+
+    def showObjectAccelerationEvents(self, **kwargs):
+        return self._request("showObjectAccelerationEvents", **kwargs)
+
+    def updateLogbookDriverExtern(self, **kwargs):
+        return self._request("updateLogbookDriverExtern", **kwargs)
+
+    def showTripSummaryReportExtern(self, **kwargs):
+        return self._request("showTripSummaryReportExtern", **kwargs)
+
     def showWorkingTimes(self, **kwargs):
         return self._request("showWorkingTimes", **kwargs)
 
     def updateLogbookMode(self, **kwargs):
         return self._request("updateLogbookMode", **kwargs)
-
-    def showIOReportExtern(self, **kwargs):
-        return self._request("showIOReportExtern", **kwargs)
 
     def showStandStills(self, **kwargs):
         return self._request("showStandStills", **kwargs)
@@ -381,8 +433,8 @@ class WfConnectGeneratedAbc(metaclass=ABCMeta):
     def updateWorkState(self, **kwargs):
         return self._request("updateWorkState", **kwargs)
 
-    def getDriverKPIsExtern(self, **kwargs):
-        return self._request("getDriverKPIsExtern", **kwargs)
+    def showDigitalInputStateMileage(self, **kwargs):
+        return self._request("showDigitalInputStateMileage", **kwargs)
 
     def getKPIs(self, **kwargs):
         return self._request("getKPIs", **kwargs)
@@ -399,35 +451,14 @@ class WfConnectGeneratedAbc(metaclass=ABCMeta):
     def showLogbookReport(self, **kwargs):
         return self._request("showLogbookReport", **kwargs)
 
-    def showAccelerationEvents(self, **kwargs):
-        return self._request("showAccelerationEvents", **kwargs)
-
-    def showOptiDriveIndicator(self, **kwargs):
-        return self._request("showOptiDriveIndicator", **kwargs)
-
-    def showLogbook(self, **kwargs):
-        return self._request("showLogbook", **kwargs)
-
-    def getObjectKPIs(self, **kwargs):
-        return self._request("getObjectKPIs", **kwargs)
-
     def showLogbookHistory(self, **kwargs):
         return self._request("showLogbookHistory", **kwargs)
-
-    def showSpeedingEvents(self, **kwargs):
-        return self._request("showSpeedingEvents", **kwargs)
-
-    def showObjectAccelerationEvents(self, **kwargs):
-        return self._request("showObjectAccelerationEvents", **kwargs)
 
     def showTracks(self, **kwargs):
         return self._request("showTracks", **kwargs)
 
     def getRemainingDrivingTimesEU(self, **kwargs):
         return self._request("getRemainingDrivingTimesEU", **kwargs)
-
-    def showTripSummaryReportExtern(self, **kwargs):
-        return self._request("showTripSummaryReportExtern", **kwargs)
 
     def updateLogbook(self, **kwargs):
         return self._request("updateLogbook", **kwargs)
