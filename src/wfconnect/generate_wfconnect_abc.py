@@ -101,7 +101,8 @@ def get_method_names_from_wsdl():
             if tag == "a":
                 for name, value in attrs:
                     if name == "href":
-                        wsdl_links.append(value)
+                        https_value = value.replace("http://","https://")
+                        wsdl_links.append(https_value)
 
     MyHTMLParser().feed(soap)
 
